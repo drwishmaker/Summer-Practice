@@ -1,6 +1,6 @@
 ﻿namespace Summer_Practice
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.graphField = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.valueTable = new System.Windows.Forms.DataGridView();
             this.timeValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,8 @@
             this.subBValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subCValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxUserData = new System.Windows.Forms.GroupBox();
+            this.numericUpDownStep = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.numericUpDownSpeedK2 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.numericUpDownSpeedK1 = new System.Windows.Forms.NumericUpDown();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.graphField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valueTable)).BeginInit();
             this.groupBoxUserData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeedK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeedK1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMax)).BeginInit();
@@ -80,55 +83,55 @@
             // 
             // graphField
             // 
-            chartArea2.Name = "ChartArea1";
-            this.graphField.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graphField.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.graphField.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.graphField.Legends.Add(legend4);
             this.graphField.Location = new System.Drawing.Point(12, 12);
             this.graphField.Name = "graphField";
             this.graphField.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Color = System.Drawing.Color.Blue;
-            series7.Legend = "Legend1";
-            series7.Name = "product A";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Color = System.Drawing.Color.Red;
-            series8.Legend = "Legend1";
-            series8.Name = "product B";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Color = System.Drawing.Color.Green;
-            series9.Legend = "Legend1";
-            series9.Name = "product C";
-            series10.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Color = System.Drawing.Color.Blue;
-            series10.Legend = "Legend1";
-            series10.Name = "accuracy A";
-            series11.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Color = System.Drawing.Color.Red;
-            series11.Legend = "Legend1";
-            series11.Name = "accuracy B";
-            series12.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series12.Color = System.Drawing.Color.Green;
-            series12.Legend = "Legend1";
-            series12.Name = "accuracy C";
-            this.graphField.Series.Add(series7);
-            this.graphField.Series.Add(series8);
-            this.graphField.Series.Add(series9);
-            this.graphField.Series.Add(series10);
-            this.graphField.Series.Add(series11);
-            this.graphField.Series.Add(series12);
-            this.graphField.Size = new System.Drawing.Size(552, 315);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series19.Color = System.Drawing.Color.Blue;
+            series19.Legend = "Legend1";
+            series19.Name = "product A";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series20.Color = System.Drawing.Color.Red;
+            series20.Legend = "Legend1";
+            series20.Name = "product B";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series21.Color = System.Drawing.Color.Green;
+            series21.Legend = "Legend1";
+            series21.Name = "product C";
+            series22.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series22.Color = System.Drawing.Color.Blue;
+            series22.Legend = "Legend1";
+            series22.Name = "accuracy A";
+            series23.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series23.Color = System.Drawing.Color.Red;
+            series23.Legend = "Legend1";
+            series23.Name = "accuracy B";
+            series24.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series24.Color = System.Drawing.Color.Green;
+            series24.Legend = "Legend1";
+            series24.Name = "accuracy C";
+            this.graphField.Series.Add(series19);
+            this.graphField.Series.Add(series20);
+            this.graphField.Series.Add(series21);
+            this.graphField.Series.Add(series22);
+            this.graphField.Series.Add(series23);
+            this.graphField.Series.Add(series24);
+            this.graphField.Size = new System.Drawing.Size(552, 332);
             this.graphField.TabIndex = 0;
-            this.graphField.Text = "chart1";
+            this.graphField.Text = "fieldGraph";
             // 
             // valueTable
             // 
@@ -141,7 +144,7 @@
             this.valueTable.Location = new System.Drawing.Point(538, 12);
             this.valueTable.Name = "valueTable";
             this.valueTable.RowHeadersVisible = false;
-            this.valueTable.Size = new System.Drawing.Size(401, 315);
+            this.valueTable.Size = new System.Drawing.Size(401, 332);
             this.valueTable.TabIndex = 1;
             // 
             // timeValue
@@ -170,6 +173,8 @@
             // 
             // groupBoxUserData
             // 
+            this.groupBoxUserData.Controls.Add(this.numericUpDownStep);
+            this.groupBoxUserData.Controls.Add(this.label11);
             this.groupBoxUserData.Controls.Add(this.numericUpDownSpeedK2);
             this.groupBoxUserData.Controls.Add(this.label9);
             this.groupBoxUserData.Controls.Add(this.numericUpDownSpeedK1);
@@ -190,14 +195,41 @@
             this.groupBoxUserData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBoxUserData.Location = new System.Drawing.Point(945, 117);
             this.groupBoxUserData.Name = "groupBoxUserData";
-            this.groupBoxUserData.Size = new System.Drawing.Size(292, 210);
+            this.groupBoxUserData.Size = new System.Drawing.Size(292, 227);
             this.groupBoxUserData.TabIndex = 3;
             this.groupBoxUserData.TabStop = false;
             this.groupBoxUserData.Text = "Your data ";
             // 
+            // numericUpDownStep
+            // 
+            this.numericUpDownStep.DecimalPlaces = 2;
+            this.numericUpDownStep.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownStep.Location = new System.Drawing.Point(142, 102);
+            this.numericUpDownStep.Name = "numericUpDownStep";
+            this.numericUpDownStep.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownStep.TabIndex = 16;
+            this.numericUpDownStep.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(104, 104);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Step: ";
+            // 
             // numericUpDownSpeedK2
             // 
-            this.numericUpDownSpeedK2.Location = new System.Drawing.Point(165, 178);
+            this.numericUpDownSpeedK2.Location = new System.Drawing.Point(165, 192);
             this.numericUpDownSpeedK2.Name = "numericUpDownSpeedK2";
             this.numericUpDownSpeedK2.Size = new System.Drawing.Size(43, 23);
             this.numericUpDownSpeedK2.TabIndex = 14;
@@ -210,7 +242,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 177);
+            this.label9.Location = new System.Drawing.Point(6, 191);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(153, 17);
             this.label9.TabIndex = 14;
@@ -218,7 +250,7 @@
             // 
             // numericUpDownSpeedK1
             // 
-            this.numericUpDownSpeedK1.Location = new System.Drawing.Point(165, 149);
+            this.numericUpDownSpeedK1.Location = new System.Drawing.Point(165, 163);
             this.numericUpDownSpeedK1.Name = "numericUpDownSpeedK1";
             this.numericUpDownSpeedK1.Size = new System.Drawing.Size(43, 23);
             this.numericUpDownSpeedK1.TabIndex = 13;
@@ -231,7 +263,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 150);
+            this.label8.Location = new System.Drawing.Point(6, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(153, 17);
             this.label8.TabIndex = 13;
@@ -239,7 +271,7 @@
             // 
             // numericUpDownMax
             // 
-            this.numericUpDownMax.Location = new System.Drawing.Point(233, 120);
+            this.numericUpDownMax.Location = new System.Drawing.Point(224, 134);
             this.numericUpDownMax.Name = "numericUpDownMax";
             this.numericUpDownMax.Size = new System.Drawing.Size(38, 23);
             this.numericUpDownMax.TabIndex = 12;
@@ -252,7 +284,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(194, 120);
+            this.label7.Location = new System.Drawing.Point(194, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 17);
             this.label7.TabIndex = 10;
@@ -260,7 +292,7 @@
             // 
             // numericUpDownMin
             // 
-            this.numericUpDownMin.Location = new System.Drawing.Point(146, 120);
+            this.numericUpDownMin.Location = new System.Drawing.Point(146, 134);
             this.numericUpDownMin.Name = "numericUpDownMin";
             this.numericUpDownMin.Size = new System.Drawing.Size(42, 23);
             this.numericUpDownMin.TabIndex = 11;
@@ -273,7 +305,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(119, 120);
+            this.label6.Location = new System.Drawing.Point(119, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 17);
             this.label6.TabIndex = 9;
@@ -281,7 +313,7 @@
             // 
             // numericUpDownTime
             // 
-            this.numericUpDownTime.Location = new System.Drawing.Point(55, 94);
+            this.numericUpDownTime.Location = new System.Drawing.Point(55, 102);
             this.numericUpDownTime.Name = "numericUpDownTime";
             this.numericUpDownTime.Size = new System.Drawing.Size(43, 23);
             this.numericUpDownTime.TabIndex = 10;
@@ -294,7 +326,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 120);
+            this.label5.Location = new System.Drawing.Point(6, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 17);
             this.label5.TabIndex = 8;
@@ -310,7 +342,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Location = new System.Drawing.Point(6, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 6;
@@ -390,26 +422,31 @@
             this.buttonEiler.TabIndex = 6;
             this.buttonEiler.Text = "Eiler method";
             this.buttonEiler.UseVisualStyleBackColor = true;
+            this.buttonEiler.Click += new System.EventHandler(this.buttonEiler_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1234, 334);
+            this.ClientSize = new System.Drawing.Size(1240, 345);
             this.Controls.Add(this.buttonEiler);
             this.Controls.Add(this.buttonAnalytical);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxUserData);
             this.Controls.Add(this.valueTable);
             this.Controls.Add(this.graphField);
-            this.Name = "Form1";
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Practical exercise";
             ((System.ComponentModel.ISupportInitialize)(this.graphField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.valueTable)).EndInit();
             this.groupBoxUserData.ResumeLayout(false);
             this.groupBoxUserData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeedK2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeedK1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMax)).EndInit();
@@ -452,6 +489,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subAValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn subBValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn subCValue;
+        private System.Windows.Forms.NumericUpDown numericUpDownStep;
+        private System.Windows.Forms.Label label11;
     }
 }
 
