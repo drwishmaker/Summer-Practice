@@ -143,29 +143,9 @@ namespace Summer_Practice
 
         private double getAccuracy(double concA)
         {
-            Random pon = new Random();
             Random acc = new Random();
-
             double accuracy = 0;
-            int posOrNeg;
-            posOrNeg = pon.Next(1, 2);
-
-            if (Convert.ToInt32(numericUpDownMin.Value) == Convert.ToInt32(numericUpDownMax.Value))
-            {
-                if (posOrNeg == 1)
-                {
-                    accuracy = Convert.ToDouble(numericUpDownMax.Value);
-                    return accuracy;
-                }
-
-                else if (posOrNeg == 2)
-                {
-                    accuracy = (-1)*Convert.ToDouble(numericUpDownMax.Value);
-                    return accuracy;
-                }
-            }
-
-            accuracy = (concA/100)*acc.Next(Convert.ToInt32(numericUpDownMin.Value), Convert.ToInt32(numericUpDownMax.Value));
+            accuracy = (concA/100)*acc.Next(Convert.ToInt32(numericUpDownMax.Value) - Convert.ToInt32(numericUpDownMin.Value), Convert.ToInt32(numericUpDownMax.Value));
             return accuracy;
         }
 
