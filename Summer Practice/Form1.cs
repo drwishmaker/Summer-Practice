@@ -23,57 +23,71 @@ namespace Summer_Practice
 
         private void buildAnalyticalGraph()
         {
-            for (double time = 0; time <= Convert.ToDouble(numericUpDownTime.Value); time += Convert.ToDouble(numericUpDownTime.Value) / 20)
+            try
             {
-                concA = Convert.ToDouble(numericUpDownSubA.Value) * Math.Exp((-1)*Convert.ToDouble(numericUpDownSpeedK1.Value)*time);
-                graphField.Series[0].Points.AddXY(time, concA);
-                concB = (Convert.ToDouble(numericUpDownSubA.Value) - concA) * Math.Exp((-1) * Convert.ToDouble(numericUpDownSpeedK2.Value)*time);
-                graphField.Series[1].Points.AddXY(time, concB);
-                graphField.Series[2].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB);
-            }    
+                for (double time = 0; time <= Convert.ToDouble(numericUpDownTime.Value); time += Convert.ToDouble(numericUpDownTime.Value) / 20)
+                {
+                    concA = Convert.ToDouble(numericUpDownSubA.Value) * Math.Exp((-1) * Convert.ToDouble(numericUpDownSpeedK1.Value) * time);
+                    graphField.Series[0].Points.AddXY(time, concA);
+                    concB = (Convert.ToDouble(numericUpDownSubA.Value) - concA) * Math.Exp((-1) * Convert.ToDouble(numericUpDownSpeedK2.Value) * time);
+                    graphField.Series[1].Points.AddXY(time, concB);
+                    graphField.Series[2].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error", "Please check the entered data");
+            }
         }
 
         private void buildEilerGraph()
         {
-            firstPoint = true;
-            for (double time = 0; time <= Convert.ToDouble(numericUpDownTime.Value); time += Convert.ToDouble(numericUpDownTime.Value)/20)
+            try
             {
-                if (firstPoint)
+                firstPoint = true;
+                for (double time = 0; time <= Convert.ToDouble(numericUpDownTime.Value); time += Convert.ToDouble(numericUpDownTime.Value) / 20)
                 {
-                    concA = Convert.ToDouble(numericUpDownSubA.Value);
-                    previousConcA = concA;
-                    graphField.Series[0].Points.AddXY(time, concA);
-                    graphField.Series[3].Points.AddXY(time, concA + getAccuracy(concA));
-                }
+                    if (firstPoint)
+                    {
+                        concA = Convert.ToDouble(numericUpDownSubA.Value);
+                        previousConcA = concA;
+                        graphField.Series[0].Points.AddXY(time, concA);
+                        graphField.Series[3].Points.AddXY(time, concA + getAccuracy(concA));
+                    }
 
-                else
-                {
-                    concA = previousConcA - Convert.ToDouble(numericUpDownStep.Value)*Convert.ToDouble(numericUpDownSpeedK1.Value)*previousConcA;
-                    previousConcA = concA;
-                    graphField.Series[0].Points.AddXY(time, concA);
-                    graphField.Series[3].Points.AddXY(time, concA + getAccuracy(concA));
-                    
-                }
+                    else
+                    {
+                        concA = previousConcA - Convert.ToDouble(numericUpDownStep.Value) * Convert.ToDouble(numericUpDownSpeedK1.Value) * previousConcA;
+                        previousConcA = concA;
+                        graphField.Series[0].Points.AddXY(time, concA);
+                        graphField.Series[3].Points.AddXY(time, concA + getAccuracy(concA));
 
-                if (firstPoint)
-                {
-                    concB = 0;
-                    previousConcB = concB;
-                    graphField.Series[1].Points.AddXY(time, concB);
-                    graphField.Series[4].Points.AddXY(time, concB + getAccuracy(concA));      
-                }
+                    }
 
-                else
-                {
-                    concB = previousConcB + Convert.ToDouble(numericUpDownStep.Value) * (Convert.ToDouble(numericUpDownSpeedK1.Value) * concA - previousConcB * Convert.ToDouble(numericUpDownSpeedK2.Value));
-                    previousConcB = concB;
-                    graphField.Series[1].Points.AddXY(time, concB);
-                    graphField.Series[4].Points.AddXY(time, concB + getAccuracy(concA));
-                }
+                    if (firstPoint)
+                    {
+                        concB = 0;
+                        previousConcB = concB;
+                        graphField.Series[1].Points.AddXY(time, concB);
+                        graphField.Series[4].Points.AddXY(time, concB + getAccuracy(concA));
+                    }
 
-                firstPoint = false;
-                graphField.Series[2].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB);
-                graphField.Series[5].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB + getAccuracy(concA));
+                    else
+                    {
+                        concB = previousConcB + Convert.ToDouble(numericUpDownStep.Value) * (Convert.ToDouble(numericUpDownSpeedK1.Value) * concA - previousConcB * Convert.ToDouble(numericUpDownSpeedK2.Value));
+                        previousConcB = concB;
+                        graphField.Series[1].Points.AddXY(time, concB);
+                        graphField.Series[4].Points.AddXY(time, concB + getAccuracy(concA));
+                    }
+
+                    firstPoint = false;
+                    graphField.Series[2].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB);
+                    graphField.Series[5].Points.AddXY(time, Convert.ToDouble(numericUpDownSubA.Value) - concA - concB + getAccuracy(concA));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error", "Please check the entered data");
             }
             
         }
